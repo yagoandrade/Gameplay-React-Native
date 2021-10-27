@@ -8,8 +8,8 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 export function SignIn() {
     const navigation = useNavigation();
 
-    function handleSignIn(params:type) {
-        navigation.navigate('Home');
+    function handleSignIn() {
+        navigation.navigate("Home");
     }
 
     return (

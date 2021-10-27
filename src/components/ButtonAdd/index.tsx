@@ -5,7 +5,7 @@ import { styles } from './styles';
 
 export function ButtonAdd({...rest}: RectButtonProps) {
     return(
-        <RectButton style={styles.container}>
+        <RectButton style={styles.container} {...rest}>
 
         </RectButton>
     );
