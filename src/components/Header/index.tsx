@@ -14,7 +14,7 @@ type Props = {
 }
 
 export function Header({ title, action }: Props) {
-    const { secondary100, secondary40, heading } = theme.colors;
+    const { secondary40, secondary80, heading } = theme.colors;
 
     const navigation = useNavigation();
 
@@ -23,7 +23,7 @@ export function Header({ title, action }: Props) {
     }
 
     return(
-        <LinearGradient style={styles.container} colors={[secondary40, secondary100]}>
+        <LinearGradient style={styles.container} colors={[secondary80, secondary40]} >
             <BorderlessButton onPress={handleGoBack}>
                 <Feather name="arrow-left" size={24} color={heading} />
             </BorderlessButton>
@@ -31,10 +31,12 @@ export function Header({ title, action }: Props) {
                 { title }
             </Text>
             {
-                action &&
+                action ?
                 <View>
                     { action }
                 </View>
+                :
+                <View style={{ width: 24}} />
             }
         </LinearGradient>
     );

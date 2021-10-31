@@ -11,6 +11,8 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
+        borderBottomWidth: 1,
+        borderColor: theme.colors.secondary50
     },
     title: {
         flex: 1,
